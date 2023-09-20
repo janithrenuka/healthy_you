@@ -1,0 +1,332 @@
+[
+    {
+        
+        "day": 1,
+        "type": "Strength",
+        "exercises": [
+            "Bodyweight squats: 3 sets of 10 reps",
+            "Push-ups: 3 sets of 8 reps",
+            "Plank: 3 sets of 20 seconds"
+        ]
+    },
+    {
+        "day": 2,
+        "type": "Cardio",
+        "exercises": [
+            "10-minute warm-up",
+            "15-minute jog or brisk walk",
+            "Jumping jacks: 3 sets of 20 reps",
+            "High knees: 3 sets of 20 reps",
+            "Burpees: 3 sets of 8 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 3,
+        "type": "Flexibility and Core",
+        "exercises": [
+            "10-minute warm-up",
+            "Yoga or stretching routine",
+            "Bicycle crunches: 3 sets of 15 reps",
+            "Russian twists: 3 sets of 15 reps (each side)",
+            "Leg raises: 3 sets of 10 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 4,
+        "type": "Strength",
+        "exercises": [
+            "Bodyweight squats: 4 sets of 12 reps",
+            "Push-ups: 4 sets of 10 reps",
+            "Lunges: 3 sets of 10 reps (each leg)",
+            "Plank: 3 sets of 30 seconds"
+        ]
+    },
+    {
+        "day": 5,
+        "type": "Cardio",
+        "exercises": [
+            "10-minute warm-up",
+            "20-minute jog or brisk walk",
+            "Jumping jacks: 3 sets of 25 reps",
+            "High knees: 3 sets of 25 reps",
+            "Burpees: 3 sets of 10 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 6,
+        "type": "Flexibility and Core",
+        "exercises": [
+            "10-minute warm-up",
+            "Yoga or stretching routine",
+            "Bicycle crunches: 3 sets of 20 reps",
+            "Russian twists: 3 sets of 20 reps (each side)",
+            "Leg raises: 3 sets of 12 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 7,
+        "type": "Rest",
+        "exercises": [
+            "Rest and recover for the day"
+        ]
+    },
+    {
+        "day": 8,
+        "type": "Strength",
+        "exercises": [
+            "Dumbbell squats: 3 sets of 10 reps",
+            "Push-ups: 4 sets of 12 reps",
+            "Lunges with dumbbells: 3 sets of 10 reps (each leg)",
+            "Plank: 3 sets of 40 seconds"
+        ]
+    },
+    {
+        "day": 9,
+        "type": "Cardio",
+        "exercises": [
+            "10-minute warm-up",
+            "25-minute jog or brisk walk",
+            "Jumping jacks: 3 sets of 30 reps",
+            "High knees: 3 sets of 30 reps",
+            "Burpees: 3 sets of 12 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        
+        "day": 10,
+        "type": "Flexibility and Core",
+        "exercises": [
+            "10-minute warm-up",
+            "Yoga or stretching routine",
+            "Bicycle crunches: 3 sets of 25 reps",
+            "Russian twists: 3 sets of 25 reps (each side)",
+            "Leg raises: 3 sets of 15 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        
+        "day": 11,
+        "type": "Strength",
+        "exercises": [
+            "Bodyweight squats: 3 sets of 10 reps",
+            "Push-ups: 3 sets of 8 reps",
+            "Plank: 3 sets of 20 seconds"
+        ]
+    },
+    {
+        "day": 12,
+        "type": "Cardio",
+        "exercises": [
+            "10-minute warm-up",
+            "15-minute jog or brisk walk",
+            "Jumping jacks: 3 sets of 20 reps",
+            "High knees: 3 sets of 20 reps",
+            "Burpees: 3 sets of 8 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 13,
+        "type": "Flexibility and Core",
+        "exercises": [
+            "10-minute warm-up",
+            "Yoga or stretching routine",
+            "Bicycle crunches: 3 sets of 15 reps",
+            "Russian twists: 3 sets of 15 reps (each side)",
+            "Leg raises: 3 sets of 10 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 14,
+        "type": "Strength",
+        "exercises": [
+            "Bodyweight squats: 4 sets of 12 reps",
+            "Push-ups: 4 sets of 10 reps",
+            "Lunges: 3 sets of 10 reps (each leg)",
+            "Plank: 3 sets of 30 seconds"
+        ]
+    },
+    {
+        "day": 15,
+        "type": "Cardio",
+        "exercises": [
+            "10-minute warm-up",
+            "20-minute jog or brisk walk",
+            "Jumping jacks: 3 sets of 25 reps",
+            "High knees: 3 sets of 25 reps",
+            "Burpees: 3 sets of 10 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 16,
+        "type": "Flexibility and Core",
+        "exercises": [
+            "10-minute warm-up",
+            "Yoga or stretching routine",
+            "Bicycle crunches: 3 sets of 20 reps",
+            "Russian twists: 3 sets of 20 reps (each side)",
+            "Leg raises: 3 sets of 12 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 17,
+        "type": "Rest",
+        "exercises": [
+            "Rest and recover for the day"
+        ]
+    },
+    {
+        "day": 18,
+        "type": "Strength",
+        "exercises": [
+            "Dumbbell squats: 3 sets of 10 reps",
+            "Push-ups: 4 sets of 12 reps",
+            "Lunges with dumbbells: 3 sets of 10 reps (each leg)",
+            "Plank: 3 sets of 40 seconds"
+        ]
+    },
+    {
+        "day": 19,
+        "type": "Cardio",
+        "exercises": [
+            "10-minute warm-up",
+            "25-minute jog or brisk walk",
+            "Jumping jacks: 3 sets of 30 reps",
+            "High knees: 3 sets of 30 reps",
+            "Burpees: 3 sets of 12 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        
+        "day": 20,
+        "type": "Flexibility and Core",
+        "exercises": [
+            "10-minute warm-up",
+            "Yoga or stretching routine",
+            "Bicycle crunches: 3 sets of 25 reps",
+            "Russian twists: 3 sets of 25 reps (each side)",
+            "Leg raises: 3 sets of 15 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        
+        "day": 21,
+        "type": "Strength",
+        "exercises": [
+            "Bodyweight squats: 3 sets of 10 reps",
+            "Push-ups: 3 sets of 8 reps",
+            "Plank: 3 sets of 20 seconds"
+        ]
+    },
+    {
+        "day": 22,
+        "type": "Cardio",
+        "exercises": [
+            "10-minute warm-up",
+            "15-minute jog or brisk walk",
+            "Jumping jacks: 3 sets of 20 reps",
+            "High knees: 3 sets of 20 reps",
+            "Burpees: 3 sets of 8 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 23,
+        "type": "Flexibility and Core",
+        "exercises": [
+            "10-minute warm-up",
+            "Yoga or stretching routine",
+            "Bicycle crunches: 3 sets of 15 reps",
+            "Russian twists: 3 sets of 15 reps (each side)",
+            "Leg raises: 3 sets of 10 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 24,
+        "type": "Strength",
+        "exercises": [
+            "Bodyweight squats: 4 sets of 12 reps",
+            "Push-ups: 4 sets of 10 reps",
+            "Lunges: 3 sets of 10 reps (each leg)",
+            "Plank: 3 sets of 30 seconds"
+        ]
+    },
+    {
+        "day": 25,
+        "type": "Cardio",
+        "exercises": [
+            "10-minute warm-up",
+            "20-minute jog or brisk walk",
+            "Jumping jacks: 3 sets of 25 reps",
+            "High knees: 3 sets of 25 reps",
+            "Burpees: 3 sets of 10 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 26,
+        "type": "Flexibility and Core",
+        "exercises": [
+            "10-minute warm-up",
+            "Yoga or stretching routine",
+            "Bicycle crunches: 3 sets of 20 reps",
+            "Russian twists: 3 sets of 20 reps (each side)",
+            "Leg raises: 3 sets of 12 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        "day": 27,
+        "type": "Rest",
+        "exercises": [
+            "Rest and recover for the day"
+        ]
+    },
+    {
+        "day": 28,
+        "type": "Strength",
+        "exercises": [
+            "Dumbbell squats: 3 sets of 10 reps",
+            "Push-ups: 4 sets of 12 reps",
+            "Lunges with dumbbells: 3 sets of 10 reps (each leg)",
+            "Plank: 3 sets of 40 seconds"
+        ]
+    },
+    {
+        "day": 29,
+        "type": "Cardio",
+        "exercises": [
+            "10-minute warm-up",
+            "25-minute jog or brisk walk",
+            "Jumping jacks: 3 sets of 30 reps",
+            "High knees: 3 sets of 30 reps",
+            "Burpees: 3 sets of 12 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    },
+    {
+        
+        "day": 30,
+        "type": "Flexibility and Core",
+        "exercises": [
+            "10-minute warm-up",
+            "Yoga or stretching routine",
+            "Bicycle crunches: 3 sets of 25 reps",
+            "Russian twists: 3 sets of 25 reps (each side)",
+            "Leg raises: 3 sets of 15 reps",
+            "10-minute cool-down (stretching)"
+        ]
+    }
+] 

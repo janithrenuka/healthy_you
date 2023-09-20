@@ -1,4 +1,4 @@
-# bmicalculator
+# healthy_you
 
 A new Flutter project.
 

@@ -32,6 +32,8 @@ class _CalculatorState extends State<Calculator> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -40,68 +42,85 @@ class _CalculatorState extends State<Calculator> {
           child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        gender = 'M';
-                        print(gender);
-                      });
-                    },
-                    child: Container(
-                      height: 200,
-                      width: 175,
-                      decoration: BoxDecoration(
-                        color: gender == 'M'
-                            ? Colors.orange.withAlpha(150)
-                            : Colors.orange.withAlpha(50),
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      padding: const EdgeInsets.all(8.0),
-                      child: const Column(
-                        children: [
-                          Icon(
-                            Icons.male,
-                            size: 150,
-                          ),
-                          Text("Male"),
-                        ],
-                      ),
+                  Container(
+                    height: 200,
+                    width: width * 0.90,
+                    decoration: BoxDecoration(
+                        //color: Colors.amber,
+                        borderRadius: BorderRadius.circular(20)),
+                    child: const Image(
+                      width: 50,
+                      height: 50,
+                      image: AssetImage('assets/images/olympic-athlete.gif'),
                     ),
-                  ),
-                  const Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        gender = 'F';
-                        print(gender);
-                      });
-                    },
-                    child: Container(
-                      height: 200,
-                      width: 175,
-                      decoration: BoxDecoration(
-                        color: gender == 'F'
-                            ? Colors.orange.withAlpha(150)
-                            : Colors.orange.withAlpha(50),
-                        borderRadius: BorderRadius.circular(25),
-                      ),
-                      padding: const EdgeInsets.all(8.0),
-                      child: const Column(
-                        children: [
-                          Icon(
-                            Icons.female,
-                            size: 150,
-                          ),
-                          Text("Female"),
-                        ],
-                      ),
-                    ),
-                  ),
+                  )
                 ],
               ),
+              // Row(
+              //   children: [
+              //     GestureDetector(
+              //       onTap: () {
+              //         setState(() {
+              //           gender = 'M';
+              //           print(gender);
+              //         });
+              //       },
+              //       child: Container(
+              //         height: 200,
+              //         width: 175,
+              //         decoration: BoxDecoration(
+              //           color: gender == 'M'
+              //               ? Colors.orange.withAlpha(150)
+              //               : Colors.orange.withAlpha(50),
+              //           borderRadius: BorderRadius.circular(25),
+              //         ),
+              //         padding: const EdgeInsets.all(8.0),
+              //         child: const Column(
+              //           children: [
+              //             Icon(
+              //               Icons.male,
+              //               size: 150,
+              //             ),
+              //             Text("Male"),
+              //           ],
+              //         ),
+              //       ),
+              //     ),
+              //     const Spacer(),
+              //     GestureDetector(
+              //       onTap: () {
+              //         setState(() {
+              //           gender = 'F';
+              //           print(gender);
+              //         });
+              //       },
+              //       child: Container(
+              //         height: 200,
+              //         width: 175,
+              //         decoration: BoxDecoration(
+              //           color: gender == 'F'
+              //               ? Colors.orange.withAlpha(150)
+              //               : Colors.orange.withAlpha(50),
+              //           borderRadius: BorderRadius.circular(25),
+              //         ),
+              //         padding: const EdgeInsets.all(8.0),
+              //         child: const Column(
+              //           children: [
+              //             Icon(
+              //               Icons.female,
+              //               size: 150,
+              //             ),
+              //             Text("Female"),
+              //           ],
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
               const SizedBox(
-                height: 50,
+                height: 30,
               ),
               Row(
                 children: [
@@ -208,13 +227,15 @@ class _CalculatorState extends State<Calculator> {
                   Text(
                     bmi.toStringAsFixed(2),
                     style: kInputLabelColor.copyWith(
-                        color: kOutputTextColor, fontSize: 60),
+                        color: kOutputTextColor, fontSize: 60
+                      ),
                   ),
                   Text(
                     getResult(bmi),
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 20,
+                      fontSize: 25,
+                      color: bmi >= 25 ? kOverWarnningColor : (bmi < 25 && bmi >= 18.5 ? kNormalColor : kUnderWarnningColor),
                     ),
                   ),
                 ],
