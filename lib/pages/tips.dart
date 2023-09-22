@@ -56,24 +56,9 @@ class _TipsState extends State<Tips> {
 
   @override
   Widget build(BuildContext context) {
-    // return Scaffold(
-    //   body: Center(
-    //       child: Text('Connection Status: ${_connectionStatus.toString()}')),
-    // );
-
-    return Card(
-      child: SingleChildScrollView(
-        // Replace SingleChildScrollView with ListView for a scrollable list
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: List.generate(
-            20,
-            (index) => ListTile(
-              title: Text('Item $index'),
-            ),
-          ),
-        ),
-      ),
+    return Scaffold(
+      body: Center(
+          child: Text('Connection Status: ${_connectionStatus.toString()}')),
     );
   }
 }
