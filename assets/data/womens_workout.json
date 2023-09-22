@@ -1,7 +1,7 @@
 [
     {
         
-        "day": 1,
+        "day": "01",
         "type": "Strength",
         "exercises": [
             "Bodyweight squats: 3 sets of 10 reps",
@@ -10,7 +10,7 @@
         ]
     },
     {
-        "day": 2,
+        "day": "02",
         "type": "Cardio",
         "exercises": [
             "10-minute warm-up",
@@ -22,7 +22,7 @@
         ]
     },
     {
-        "day": 3,
+        "day": "03",
         "type": "Flexibility and Core",
         "exercises": [
             "10-minute warm-up",
@@ -34,7 +34,7 @@
         ]
     },
     {
-        "day": 4,
+        "day": "04",
         "type": "Strength",
         "exercises": [
             "Bodyweight squats: 4 sets of 12 reps",
@@ -44,7 +44,7 @@
         ]
     },
     {
-        "day": 5,
+        "day": "05",
         "type": "Cardio",
         "exercises": [
             "10-minute warm-up",
@@ -56,7 +56,7 @@
         ]
     },
     {
-        "day": 6,
+        "day": "06",
         "type": "Flexibility and Core",
         "exercises": [
             "10-minute warm-up",
@@ -68,14 +68,14 @@
         ]
     },
     {
-        "day": 7,
+        "day": "07",
         "type": "Rest",
         "exercises": [
             "Rest and recover for the day"
         ]
     },
     {
-        "day": 8,
+        "day": "08",
         "type": "Strength",
         "exercises": [
             "Dumbbell squats: 3 sets of 10 reps",
@@ -85,7 +85,7 @@
         ]
     },
     {
-        "day": 9,
+        "day": "09",
         "type": "Cardio",
         "exercises": [
             "10-minute warm-up",
@@ -98,7 +98,7 @@
     },
     {
         
-        "day": 10,
+        "day": "10",
         "type": "Flexibility and Core",
         "exercises": [
             "10-minute warm-up",
@@ -111,7 +111,7 @@
     },
     {
         
-        "day": 11,
+        "day": "11",
         "type": "Strength",
         "exercises": [
             "Bodyweight squats: 3 sets of 10 reps",
@@ -120,7 +120,7 @@
         ]
     },
     {
-        "day": 12,
+        "day": "12",
         "type": "Cardio",
         "exercises": [
             "10-minute warm-up",
@@ -132,7 +132,7 @@
         ]
     },
     {
-        "day": 13,
+        "day": "13",
         "type": "Flexibility and Core",
         "exercises": [
             "10-minute warm-up",
@@ -144,7 +144,7 @@
         ]
     },
     {
-        "day": 14,
+        "day": "14",
         "type": "Strength",
         "exercises": [
             "Bodyweight squats: 4 sets of 12 reps",
@@ -154,7 +154,7 @@
         ]
     },
     {
-        "day": 15,
+        "day": "15",
         "type": "Cardio",
         "exercises": [
             "10-minute warm-up",
@@ -166,7 +166,7 @@
         ]
     },
     {
-        "day": 16,
+        "day": "16",
         "type": "Flexibility and Core",
         "exercises": [
             "10-minute warm-up",
@@ -178,14 +178,14 @@
         ]
     },
     {
-        "day": 17,
+        "day": "17",
         "type": "Rest",
         "exercises": [
             "Rest and recover for the day"
         ]
     },
     {
-        "day": 18,
+        "day": "18",
         "type": "Strength",
         "exercises": [
             "Dumbbell squats: 3 sets of 10 reps",
@@ -195,7 +195,7 @@
         ]
     },
     {
-        "day": 19,
+        "day": "19",
         "type": "Cardio",
         "exercises": [
             "10-minute warm-up",
@@ -208,7 +208,7 @@
     },
     {
         
-        "day": 20,
+        "day": "20",
         "type": "Flexibility and Core",
         "exercises": [
             "10-minute warm-up",
@@ -221,7 +221,7 @@
     },
     {
         
-        "day": 21,
+        "day": "21",
         "type": "Strength",
         "exercises": [
             "Bodyweight squats: 3 sets of 10 reps",
@@ -230,7 +230,7 @@
         ]
     },
     {
-        "day": 22,
+        "day": "22",
         "type": "Cardio",
         "exercises": [
             "10-minute warm-up",
@@ -242,7 +242,7 @@
         ]
     },
     {
-        "day": 23,
+        "day": "23",
         "type": "Flexibility and Core",
         "exercises": [
             "10-minute warm-up",
@@ -254,7 +254,7 @@
         ]
     },
     {
-        "day": 24,
+        "day": "24",
         "type": "Strength",
         "exercises": [
             "Bodyweight squats: 4 sets of 12 reps",
@@ -264,7 +264,7 @@
         ]
     },
     {
-        "day": 25,
+        "day": "25",
         "type": "Cardio",
         "exercises": [
             "10-minute warm-up",
@@ -276,7 +276,7 @@
         ]
     },
     {
-        "day": 26,
+        "day": "26",
         "type": "Flexibility and Core",
         "exercises": [
             "10-minute warm-up",
@@ -288,14 +288,14 @@
         ]
     },
     {
-        "day": 27,
+        "day": "27",
         "type": "Rest",
         "exercises": [
             "Rest and recover for the day"
         ]
     },
     {
-        "day": 28,
+        "day": "28",
         "type": "Strength",
         "exercises": [
             "Dumbbell squats: 3 sets of 10 reps",
@@ -305,7 +305,7 @@
         ]
     },
     {
-        "day": 29,
+        "day": "29",
         "type": "Cardio",
         "exercises": [
             "10-minute warm-up",
@@ -318,7 +318,7 @@
     },
     {
         
-        "day": 30,
+        "day": "30",
         "type": "Flexibility and Core",
         "exercises": [
             "10-minute warm-up",
@@ -329,4 +329,4 @@
             "10-minute cool-down (stretching)"
         ]
     }
-] 
+]
