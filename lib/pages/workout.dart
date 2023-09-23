@@ -3,13 +3,11 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:developer' as developer;
-import 'package:bmicalculator/models/day_workout.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:bmicalculator/enum.dart' as EnumData;
-import 'package:swipe_refresh/swipe_refresh.dart';
 
 class Workout extends StatefulWidget {
   const Workout({super.key});
@@ -24,8 +22,17 @@ class _WorkoutState extends State<Workout> {
   bool isConnected = true;
   AssetImage image = const AssetImage('assets/images/man_workout.gif');
 
+  var typeList = [];
+  var strengthWorkoutList = [];
+  var cardioWorkoutList = [];
+  var breakfastList = [];
+  var lunchList = [];
+  var dinnerList = [];
+  var snacksList = [];
+
   String selectedGender = '';
-  String selectedType = '';
+  String selectedTypeName = '';
+  int selectedType = 1;
 
   ConnectivityResult _connectionStatus = ConnectivityResult.none;
   final Connectivity _connectivity = Connectivity();
@@ -38,7 +45,8 @@ class _WorkoutState extends State<Workout> {
 
     //set defaults
     selectedGender = EnumData.men;
-    selectedType = EnumData.beginner;
+    selectedType = EnumData.beginnerEnum;
+    selectedTypeName = EnumData.beginner;
 
     _connectivitySubscription =
         _connectivity.onConnectivityChanged.listen(_updateConnectionStatus);
@@ -46,7 +54,6 @@ class _WorkoutState extends State<Workout> {
     if (_connectionStatus == ConnectivityResult.wifi ||
         _connectionStatus == ConnectivityResult.mobile) {
       isConnected = true;
-      ReadJsonData();
       setCardHeader();
     }
   }
@@ -84,19 +91,20 @@ class _WorkoutState extends State<Workout> {
     });
   }
 
-  Future<List<DayWorkut>> ReadJsonData() async {
+  Future<Object> ReadJsonData() async {
+
     try {
       var url =
-          'https://raw.githubusercontent.com/janithrenuka/healthy_you/main/assets/data/womens_workout.json';
+          'https://raw.githubusercontent.com/janithrenuka/healthy_you/main/assets/data/mens_workout.json';
       var response = await http.get(Uri.parse(url));
 
-      final list = json.decode(response.body) as List<dynamic>;
+      return List.empty();
 
-      return list.map((e) => DayWorkut.fromJson(e)).toList();
     } catch (e) {
       return List.empty();
     }
   }
+
 
   Future<void> setCardHeader() async {
     setState(() {
@@ -107,11 +115,14 @@ class _WorkoutState extends State<Workout> {
       }
 
       if (type == 1) {
-        selectedType = EnumData.beginner;
+        selectedType = EnumData.beginnerEnum;
+        selectedTypeName = EnumData.beginner;
       } else if (type == 2) {
-        selectedType = EnumData.intermidate;
+        selectedType = EnumData.intermidateEnum;
+        selectedTypeName = EnumData.intermidate;
       } else {
-        selectedType = EnumData.expert;
+        selectedType = EnumData.expertEnum;
+        selectedTypeName = EnumData.expert;
       }
     });
   }
@@ -131,7 +142,6 @@ class _WorkoutState extends State<Workout> {
                     if (data.hasError) {
                       return Center(child: Text("${data.error}"));
                     } else if (data.hasData) {
-                      var days = data.data as List<DayWorkut>;
 
                       return Column(
                         children: [
@@ -294,19 +304,28 @@ class _WorkoutState extends State<Workout> {
                           ),
                           SingleChildScrollView(
                             scrollDirection: Axis.vertical,
-                            padding: const EdgeInsets.only(left: 10.0, right: 10.0, bottom: 5.0),
+                            padding: const EdgeInsets.only(
+                                left: 10.0, right: 10.0, bottom: 5.0),
                             child: Container(
-                              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                              padding: const EdgeInsets.only(
+                                  left: 10.0, right: 10.0),
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10.0),
                                   border: Border.all(width: 0.5)),
                               child: Column(
                                 children: [
-                                  Text( // Card Header
-                                    '$selectedGender - $selectedType',
+                                  Text(
+                                    // Card Header
+                                    '$selectedGender - $selectedTypeName',
                                     style: TextStyle(
-                                        color: type == 1 ? const Color.fromARGB(255, 30, 188, 36) : type == 2 ? const Color.fromARGB(255, 225, 202, 28) : Colors.red,
+                                        color: type == 1
+                                            ? const Color.fromARGB(
+                                                255, 30, 188, 36)
+                                            : type == 2
+                                                ? const Color.fromARGB(
+                                                    255, 225, 202, 28)
+                                                : Colors.red,
                                         fontSize: 25,
                                         fontWeight: FontWeight.bold),
                                   ),
@@ -318,135 +337,120 @@ class _WorkoutState extends State<Workout> {
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Image(
-                                        height: 90,
-                                        width: width * 0.4,
-                                        image: image,
+                                    height: 90,
+                                    width: width * 0.4,
+                                    image: image,
                                   ),
                                   const SizedBox(
                                     height: 10,
                                   ),
-                                  const Row(  // Strength workout
+                                  const Row(
+                                    // Strength workout
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Text(
                                         "Strength",
                                         textAlign: TextAlign.start,
                                         style: TextStyle(
-                                          fontSize: 18,
-                                          fontFamily: 'Sans-Serif',
-                                          fontWeight: FontWeight.w500
-                                        ),
+                                            fontSize: 18,
+                                            fontFamily: 'Sans-Serif',
+                                            fontWeight: FontWeight.w500),
                                       ),
                                     ],
                                   ),
                                   const SizedBox(
                                     height: 10,
                                   ),
-                                  const Row(  // Cardio workout
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Cardio",
-                                        textAlign: TextAlign.start,
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontFamily: 'Sans-Serif',
-                                          fontWeight: FontWeight.w500
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  const Divider(),
-                                  const Row( // Meal
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        "Meal Plan",
-                                        style: TextStyle(
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                  Image(
-                                        height: 90,
-                                        width: width * 0.4,
-                                        image: const AssetImage('assets/images/food.png'),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  const Row(  // Breakfast Meal
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Breakfast",
-                                        textAlign: TextAlign.start,
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontFamily: 'Sans-Serif',
-                                          fontWeight: FontWeight.w500
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  const Row(  // Lunch Meal
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Lunch",
-                                        textAlign: TextAlign.start,
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontFamily: 'Sans-Serif',
-                                          fontWeight: FontWeight.w500
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  const Row(  // Dinner Meal
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Dinner",
-                                        textAlign: TextAlign.start,
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontFamily: 'Sans-Serif',
-                                          fontWeight: FontWeight.w500
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  const Row(  // Snacks
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Text(
-                                        "Snacks",
-                                        textAlign: TextAlign.start,
-                                        style: TextStyle(
-                                          fontSize: 18,
-                                          fontFamily: 'Sans-Serif',
-                                          fontWeight: FontWeight.w500
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
+                                  // const Divider(),
+                                  // const Row(
+                                  //   // Meal
+                                  //   mainAxisAlignment: MainAxisAlignment.center,
+                                  //   children: [
+                                  //     Text(
+                                  //       "Meal Plan",
+                                  //       style: TextStyle(
+                                  //           fontSize: 20,
+                                  //           fontWeight: FontWeight.bold),
+                                  //     ),
+                                  //   ],
+                                  // ),
+                                  // Image(
+                                  //   height: 90,
+                                  //   width: width * 0.4,
+                                  //   image: const AssetImage(
+                                  //       'assets/images/food.png'),
+                                  // ),
+                                  // const SizedBox(
+                                  //   height: 10,
+                                  // ),
+                                  // const Row(
+                                  //   // Breakfast Meal
+                                  //   mainAxisAlignment: MainAxisAlignment.start,
+                                  //   children: [
+                                  //     Text(
+                                  //       "Breakfast",
+                                  //       textAlign: TextAlign.start,
+                                  //       style: TextStyle(
+                                  //           fontSize: 18,
+                                  //           fontFamily: 'Sans-Serif',
+                                  //           fontWeight: FontWeight.w500),
+                                  //     ),
+                                  //   ],
+                                  // ),
+                                  // const SizedBox(
+                                  //   height: 10,
+                                  // ),
+                                  // const Row(
+                                  //   // Lunch Meal
+                                  //   mainAxisAlignment: MainAxisAlignment.start,
+                                  //   children: [
+                                  //     Text(
+                                  //       "Lunch",
+                                  //       textAlign: TextAlign.start,
+                                  //       style: TextStyle(
+                                  //           fontSize: 18,
+                                  //           fontFamily: 'Sans-Serif',
+                                  //           fontWeight: FontWeight.w500),
+                                  //     ),
+                                  //   ],
+                                  // ),
+                                  // const SizedBox(
+                                  //   height: 10,
+                                  // ),
+                                  // const Row(
+                                  //   // Dinner Meal
+                                  //   mainAxisAlignment: MainAxisAlignment.start,
+                                  //   children: [
+                                  //     Text(
+                                  //       "Dinner",
+                                  //       textAlign: TextAlign.start,
+                                  //       style: TextStyle(
+                                  //           fontSize: 18,
+                                  //           fontFamily: 'Sans-Serif',
+                                  //           fontWeight: FontWeight.w500),
+                                  //     ),
+                                  //   ],
+                                  // ),
+                                  // const SizedBox(
+                                  //   height: 10,
+                                  // ),
+                                  // const Row(
+                                  //   // Snacks
+                                  //   mainAxisAlignment: MainAxisAlignment.start,
+                                  //   children: [
+                                  //     Text(
+                                  //       "Snacks",
+                                  //       textAlign: TextAlign.start,
+                                  //       style: TextStyle(
+                                  //           fontSize: 18,
+                                  //           fontFamily: 'Sans-Serif',
+                                  //           fontWeight: FontWeight.w500),
+                                  //     ),
+                                  //   ],
+                                  // ),
+                                  // const SizedBox(
+                                  //   height: 10,
+                                  // ),
                                 ],
                               ),
                             ),
@@ -462,15 +466,14 @@ class _WorkoutState extends State<Workout> {
                 )
               : const Center(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        'No internet connection. Please check your network.',
-                        style: TextStyle(color: Colors.black, fontSize: 20),
-                      ),
-                    ] 
-                  ),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'No internet connection. Please check your network.',
+                          style: TextStyle(color: Colors.black, fontSize: 20),
+                        ),
+                      ]),
                 ),
         ),
       ),

@@ -2,173 +2,35 @@
     {
         "type": 1,
         "workout": [
-            {
-                "workoutType": "strength",
-                "perWeek": 3,
-                "details": [
-                    "Squats: 3 sets of 8-10 reps",
-                    "Bench Press: 3 sets of 8-10 reps",
-                    "Bent-over Rows: 3 sets of 8-10 reps",
-                    "Overhead Press: 3 sets of 8-10 reps",
-                    "Planks: 3 sets for 30 seconds to 1 minute"
-                ]
-            },
-            {
-                "workoutType": "cardio",
-                "perWeek": 2,
-                "details": [
-                    "Brisk walking or jogging: 30 minutes"
-                ]
-            }
-        ],
-        "meals" : [
-            {
-                "mealTypeEnum" : 1,
-                "mealType" : "breakfast",
-                "mealDetails" : [
-                    "Scrambled eggs with whole-grain toast",
-                    "Fresh fruit (e.g., banana or berries)"
-                ]
-            },
-            {
-            "mealTypeEnum" : 2,
-            "mealType" : "lunch",
-            "mealDetails" : [
-                "Grilled chicken or tofu with brown rice and steamed vegetables",
-                "Salad with a variety of colorful veggies"
-            ]
-            },
-            {
-                "mealTypeEnum" : 3,
-                "mealType" : "dinner",
-                "mealDetails" : [
-                    "Baked fish with sweet potatoes and mixed greens",
-                    "Quinoa or whole-grain pasta"
-                ]
-            },
-            {
-            "mealTypeEnum" : 4,
-            "mealType" : "snacks",
-            "mealDetails" : [
-                "Greek yogurt",
-                "Nuts and seeds",
-                "Fruits"
-            ]
-            }
+            "Squats: 3 sets of 8-10 reps",
+            "Bench Press: 3 sets of 8-10 reps",
+            "Bent-over Rows: 3 sets of 8-10 reps",
+            "Overhead Press: 3 sets of 8-10 reps",
+            "Planks: 3 sets for 30 seconds to 1 minute",
+            "Brisk walking or jogging: 30 minutes"
         ]
+
+
     },
     {
         "type": 2,
         "workout": [
-            {
-                "workoutType": "strength",
-                "perWeek": 4,
-                "details": [
-                    "Squats: 4 sets of 8-10 reps",
-                    "Deadlifts: 4 sets of 8-10 reps",
-                    "Bench Press: 4 sets of 8-10 reps",
-                    "Pull-ups or Lat Pulldowns: 4 sets of 8-10 reps",
-                    "Lunges: 4 sets of 10 reps (each leg)"
-                ]
-            },
-            {
-                "workoutType": "cardio",
-                "perWeek": 3,
-                "details": [
-                    "Running, cycling, or HIIT: 30-45 minutes"
-                ]
-            }
-        ],
-        "meals" : [
-            {
-                "mealTypeEnum" : 1,
-                "mealType" : "breakfast",
-                "mealDetails" : [
-                    "Protein smoothie with fruits, spinach, and protein powder",
-                    "Whole-grain toast with avocado"
-                ]
-            },
-            {
-            "mealTypeEnum" : 2,
-            "mealType" : "lunch",
-            "mealDetails" : [
-                "Grilled chicken or salmon with quinoa and steamed vegetables",
-                "Leafy green salad with a variety of veggies"
-            ]
-            },
-            {
-                "mealTypeEnum" : 3,
-                "mealType" : "dinner",
-                "mealDetails" : [
-                    "Lean beef or plant-based protein with sweet potatoes and roasted vegetables",
-                    "Brown rice or whole-grain pasta"
-                ]
-            },
-            {
-            "mealTypeEnum" : 4,
-            "mealType" : "snacks",
-            "mealDetails" : [
-                "Greek yogurt with almonds",
-                "Protein bars",
-                "Fruit and nut mix"
-            ]
-            }
+            "Squats: 4 sets of 8-10 reps",
+            "Deadlifts: 4 sets of 8-10 reps",
+            "Bench Press: 4 sets of 8-10 reps",
+            "Pull-ups or Lat Pulldowns: 4 sets of 8-10 reps",
+            "Lunges: 4 sets of 10 reps (each leg)",
+            "Running, cycling, or HIIT: 30-45 minutes"
         ]
+
     },
     {
         "type": 3,
         "workout": [
-            {
-                "workoutType": "strength",
-                "perWeek": 5,
-                "details": [
-                    "Compound lifts (Squats, Deadlifts, Bench Press, Overhead Press) with varying rep ranges and sets",
-                    "Isolation exercises for specific muscle groups"
-                ]
-            },
-            {
-                "workoutType": "cardio",
-                "perWeek": 4,
-                "details": [
-                    "High-intensity interval training (HIIT)",
-                    "Running or cycling for endurance"
-                ]
-            }
-        ],
-        "meals" : [
-            {
-                "mealTypeEnum" : 1,
-                "mealType" : "breakfast",
-                "mealDetails" : [
-                    "High-protein omelet with spinach and whole-grain toast",
-                    "Greek yogurt with berries"
-                ]
-            },
-            {
-            "mealTypeEnum" : 2,
-            "mealType" : "lunch",
-            "mealDetails" : [
-                "Grilled chicken or fish with quinoa and a variety of steamed vegetables",
-                "Large salad with lean protein"
-            ]
-            },
-            {
-                "mealTypeEnum" : 3,
-                "mealType" : "dinner",
-                "mealDetails" : [
-                    "Lean protein (chicken, fish, lean beef) with complex carbs (sweet potatoes, brown rice) and steamed vegetables",
-                    "Healthy fats like avocado or nuts"
-                ]
-            },
-            {
-            "mealTypeEnum" : 4,
-            "mealType" : "snacks",
-            "mealDetails" : [
-                "Protein shake",
-                "Cottage cheese with fruits",
-                "Whole-grain crackers with hummus"
-            ]
-            }
+            "Compound lifts (Squats, Deadlifts, Bench Press, Overhead Press) with varying rep ranges and sets",
+            "Isolation exercises for specific muscle groups",
+            "High-intensity interval training (HIIT)",
+            "Running or cycling for endurance"
         ]
     }
 ]
