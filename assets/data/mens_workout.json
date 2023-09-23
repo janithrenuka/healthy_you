@@ -1,6 +1,7 @@
 [
     {
         "type": 1,
+        "perWeek": 3,
         "workout": [
             "Squats: 3 sets of 8-10 reps",
             "Bench Press: 3 sets of 8-10 reps",
@@ -14,6 +15,7 @@
     },
     {
         "type": 2,
+        "perWeek": 4,
         "workout": [
             "Squats: 4 sets of 8-10 reps",
             "Deadlifts: 4 sets of 8-10 reps",
@@ -26,6 +28,7 @@
     },
     {
         "type": 3,
+        "perWeek": 5,
         "workout": [
             "Compound lifts (Squats, Deadlifts, Bench Press, Overhead Press) with varying rep ranges and sets",
             "Isolation exercises for specific muscle groups",
