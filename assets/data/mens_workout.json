@@ -1,39 +1,43 @@
-[
-    {
-        "type": 1,
-        "perWeek": 3,
-        "workout": [
-            "Squats: 3 sets of 8-10 reps",
-            "Bench Press: 3 sets of 8-10 reps",
-            "Bent-over Rows: 3 sets of 8-10 reps",
-            "Overhead Press: 3 sets of 8-10 reps",
-            "Planks: 3 sets for 30 seconds to 1 minute",
-            "Brisk walking or jogging: 30 minutes"
-        ]
+{
+    "gender": "men",
+    "genderEnum": 1,
+    "workoutDetails": [
+        {
+            "type": 1,
+            "perWeek": 3,
+            "workout": [
+                "Squats: 3 sets of 8-10 reps",
+                "Bench Press: 3 sets of 8-10 reps",
+                "Bent-over Rows: 3 sets of 8-10 reps",
+                "Overhead Press: 3 sets of 8-10 reps",
+                "Planks: 3 sets for 30 seconds to 1 minute",
+                "Brisk walking or jogging: 30 minutes"
+            ]
 
 
-    },
-    {
-        "type": 2,
-        "perWeek": 4,
-        "workout": [
-            "Squats: 4 sets of 8-10 reps",
-            "Deadlifts: 4 sets of 8-10 reps",
-            "Bench Press: 4 sets of 8-10 reps",
-            "Pull-ups or Lat Pulldowns: 4 sets of 8-10 reps",
-            "Lunges: 4 sets of 10 reps (each leg)",
-            "Running, cycling, or HIIT: 30-45 minutes"
-        ]
+        },
+        {
+            "type": 2,
+            "perWeek": 4,
+            "workout": [
+                "Squats: 4 sets of 8-10 reps",
+                "Deadlifts: 4 sets of 8-10 reps",
+                "Bench Press: 4 sets of 8-10 reps",
+                "Pull-ups or Lat Pulldowns: 4 sets of 8-10 reps",
+                "Lunges: 4 sets of 10 reps (each leg)",
+                "Running, cycling, or HIIT: 30-45 minutes"
+            ]
 
-    },
-    {
-        "type": 3,
-        "perWeek": 5,
-        "workout": [
-            "Compound lifts (Squats, Deadlifts, Bench Press, Overhead Press) with varying rep ranges and sets",
-            "Isolation exercises for specific muscle groups",
-            "High-intensity interval training (HIIT)",
-            "Running or cycling for endurance"
-        ]
-    }
-]
+        },
+        {
+            "type": 3,
+            "perWeek": 5,
+            "workout": [
+                "Compound lifts (Squats, Deadlifts, Bench Press, Overhead Press) with varying rep ranges and sets",
+                "Isolation exercises for specific muscle groups",
+                "High-intensity interval training (HIIT)",
+                "Running or cycling for endurance"
+            ]
+        }
+    ]
+}
