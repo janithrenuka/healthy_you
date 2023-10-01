@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:bmicalculator/enum.dart' as EnumData;
+import 'package:swipe_refresh/swipe_refresh.dart';
 
 class Workout extends StatefulWidget {
   const Workout({super.key});
@@ -22,6 +23,7 @@ class _WorkoutState extends State<Workout> {
   int type = 1;
   bool isConnected = true;
   AssetImage image = const AssetImage('assets/images/man_workout.gif');
+  bool isLoading = true;
 
   String selectedGender = '';
   String selectedTypeName = '';
@@ -29,7 +31,6 @@ class _WorkoutState extends State<Workout> {
 
   List<WorkoutModel> workoutDetails = [];
   List<WorkoutModel> filteredWorkouts = [];
-  int filterType = 1; // Default filter type
 
   ConnectivityResult _connectionStatus = ConnectivityResult.none;
   final Connectivity _connectivity = Connectivity();
@@ -55,8 +56,12 @@ class _WorkoutState extends State<Workout> {
     setState(() {
       _connectionStatus = result;
 
-      if (_connectionStatus == ConnectivityResult.none) {
+      if (_connectionStatus == ConnectivityResult.wifi ||
+          _connectionStatus == ConnectivityResult.mobile) {
         isConnected = true;
+        fetchWorkoutData();
+      } else {
+        isConnected = false;
       }
     });
   }
@@ -79,35 +84,40 @@ class _WorkoutState extends State<Workout> {
         selectedType = EnumData.expertEnum;
         selectedTypeName = EnumData.expert;
       }
+
+      debugPrint(selectedType.toString());
+      debugPrint(selectedTypeName);
+      debugPrint(selectedGender);
     });
   }
 
   Future<void> fetchWorkoutData() async {
-    final response = await http.get(Uri.parse(
-        'https://raw.githubusercontent.com/janithrenuka/healthy_you/main/assets/data/mens_workout.json'));
+    filteredWorkouts = [];
+    if (isConnected == true) {
+      final response = await http.get(Uri.parse(
+          'https://raw.githubusercontent.com/janithrenuka/healthy_you/main/assets/data/mens_workout.json'));
 
-    if (response.statusCode == 200) {
-      List<dynamic> jsonData = json.decode(response.body)['workoutDetails'];
-      workoutDetails =
-          jsonData.map((data) => WorkoutModel.fromJson(data)).toList();
-    } else {
-      throw Exception('Failed to load workout data');
+      if (response.statusCode == 200) {
+        List<dynamic> jsonData = json.decode(response.body)['workoutDetails'];
+        workoutDetails =
+            jsonData.map((data) => WorkoutModel.fromJson(data)).toList();
+      } else {
+        throw Exception('Failed to load workout data');
+      }
+      filteredWorkouts = getFilteredWorkouts(workoutDetails);
     }
-
-    filteredWorkouts = getFilteredWorkouts();
   }
 
-  List<WorkoutModel> getFilteredWorkouts() {
-    return workoutDetails
-        .where((workout) => workout.type == selectedType)
-        .toList();
+  List<WorkoutModel> getFilteredWorkouts(workouts) {
+    debugPrint(workouts.isEmpty.toString());
+    return workouts.where((workout) => workout.type == selectedType).toList();
   }
 
   @override
   void initState() {
     super.initState();
     initConnectivity();
-    fetchWorkoutData();
+
     //set defaults
     selectedGender = EnumData.men;
     selectedType = EnumData.beginnerEnum;
@@ -119,7 +129,12 @@ class _WorkoutState extends State<Workout> {
     if (_connectionStatus == ConnectivityResult.wifi ||
         _connectionStatus == ConnectivityResult.mobile) {
       isConnected = true;
+      Future.delayed(Duration.zero, () async {
+        await fetchWorkoutData();
+      });
       setCardHeader();
+    } else {
+      isConnected = false;
     }
   }
 
@@ -392,9 +407,7 @@ class _WorkoutState extends State<Workout> {
                               child: Text(
                                 "Refresh the Tab...",
                                 style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18
-                                ),
+                                    fontWeight: FontWeight.bold, fontSize: 18),
                               ),
                             )),
                   const SizedBox(
@@ -407,9 +420,22 @@ class _WorkoutState extends State<Workout> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Text(
-                        'No internet connection. Please check your network.',
-                        style: TextStyle(color: Colors.black, fontSize: 20),
+                      Image(
+                        width: 150,
+                        height: 150,
+                        image: AssetImage('assets/images/no-wifi.png'),
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsets.only(top: 50.0, left: 50.0, right: 50.0),
+                        child: Text(
+                          'No internet connection. Please check your network.',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                          ),
+                          softWrap: true,
+                        ),
                       ),
                     ]),
               ),
